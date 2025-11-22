@@ -1,1 +1,5 @@
 pandas
+sqlite3
+tqdm
+matplotlib
+seaborn
