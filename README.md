@@ -152,6 +152,35 @@ Cada tabela do banco leva o **nome da loteria**:
   - saída legível
   - conversão de volta simples
 
+# Evolução e Processo de Desenvolvimento
+O desenvolvimento deste projeto seguiu uma progressão natural, partindo de uma abordagem exploratória até atingir uma arquitetura modular e escalável:
+
+- Implementação inicial em notebook
+
+  O processamento foi inicialmente desenvolvido em um Jupyter Notebook, focado exclusivamente nos dados da **Mega-Sena**.  
+Nesta fase, o objetivo era validar hipóteses, entender a estrutura dos dados e construir as primeiras rotinas de limpeza e transformação.
+- Generalização para múltiplos concursos:
+
+  Após a validação da lógica para a Mega-Sena, o código foi adaptado para suportar **todos os concursos da loteria federal**, tratando diferenças importantes como:  
+   - quantidade de dezenas por modalidade;  
+   - faixas e regras de premiação distintas;  
+   - colunas específicas (ex.: *trevos*, *timeCoracao*, *mesSorte*);  
+   - intervalos válidos de dezenas.
+
+   Essa etapa consolidou regras dinâmicas que permitem que a pipeline funcione para qualquer modalidade, presente ou futura.
+- Modularização e construção da Pipeline final
+  
+  Por fim, todo o código foi organizado em módulos independentes, formando uma pipeline completa de ETL, executada por meio do script ```run_etl.py```
+
+  Essa versão final trouxe:
+  - separação clara das responsabilidades
+  - reusabilidade
+  - escalabilidade
+  - compatibilidade com SQLite
+  - execução automatizada
+
+Essa evolução garantiu que o projeto fosse desenvolvido de forma progressiva, validando cada etapa antes de avançar para a arquitetura final.
+
 # Próximos passos
 - API de consulta de dados
 - Dashboard para visualização completa
