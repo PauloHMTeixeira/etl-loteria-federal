@@ -1,8 +1,4 @@
-# Data Engineer Pleno
-
-Este desafio tem como objetivo avaliar as habilidades técnicas e de raciocínio da pessoa candidata à vaga de Data Engineer Pleno na **Pier**. Queremos conhecer como você pensa, estrutura e implementa soluções de dados, da extração à disponibilização para análise.
-
-## Objetivo
+# Objetivo
 
 Este projeto implementa um **pipeline de ETL totalmente automatizado** para dados das loterias federais brasileiras.  
 O pipeline lê um dataset bruto consolidado (JSON), separa por loteria, executa validações e limpeza robusta, gera features derivadas e salva os resultados em um banco SQLite.
